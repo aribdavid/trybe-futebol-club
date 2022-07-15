@@ -1,4 +1,8 @@
 import * as express from 'express';
+import 'express-async-errors';
+import loginRouter from './routes/loginRouter';
+import teamRouter from './routes/teamRouter';
+import error from './middlewares/error';
 
 class App {
   public app: express.Express;
@@ -8,7 +12,7 @@ class App {
 
     this.config();
 
-    // Não remover essa rota
+    // Não remover essa rota a
     this.app.get('/', (req, res) => res.json({ ok: true }));
   }
 
@@ -22,6 +26,11 @@ class App {
 
     this.app.use(express.json());
     this.app.use(accessControl);
+
+    this.app.use('/login', loginRouter);
+    this.app.use('/teams', teamRouter);
+
+    this.app.use(error);
   }
 
   public start(PORT: string | number):void {
