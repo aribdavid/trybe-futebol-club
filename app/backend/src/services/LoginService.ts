@@ -4,7 +4,6 @@ import ErrorHandler from '../utils/ErrorHandler';
 import { ILogin, ILoginService, LoginReturn } from '../interfaces/ILogin';
 import { IUser } from '../interfaces/IUser';
 
-
 export default class LoginService implements ILoginService {
   constructor(private _model: IUser) {}
 
