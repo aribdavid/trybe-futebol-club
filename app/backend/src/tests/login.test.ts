@@ -4,7 +4,7 @@ import * as chai from 'chai';
 import chaiHttp = require('chai-http');
 
 import { app } from '../app';
-import User from '../database/models/UserModel';
+import User from '../database/models/User.model';
 import { Response } from 'superagent';
 
 chai.use(chaiHttp);
@@ -17,8 +17,8 @@ describe('Tests POST method for /login', () => {
 
     it('it should return the status code 400', async () => {
       chaiHttpResponse = await chai.request(app).post('/login').send({
-        email: "wd.oxwxw@dxw@flibs.com",
-        password: "177100"
+        email: "n.on@exis@tent.com",
+        password: "123321"
       });
 
       expect(chaiHttpResponse).to.have.status(400);
@@ -70,8 +70,8 @@ describe('Tests POST method for /login', () => {
 
     it('it should return the status code 401', async () => {
       chaiHttpResponse = await chai.request(app).post('/login').send({
-        email: "test@test.com",
-        password: "123775321"
+        email: "non@existent.com",
+        password: "123321"
       });
 
       expect(chaiHttpResponse).to.have.status(401);
