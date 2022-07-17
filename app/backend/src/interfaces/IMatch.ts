@@ -23,13 +23,13 @@ export interface IMatchWithTeam {
 export interface IMatchModel {
   getAll(inProgress: boolean | undefined): Promise<IMatch[]>
   create(data: Omit<Match, 'id' | 'inProgress'>): Promise<Match>
-  updateFinished(id: number): Promise<void>
+  updateToFinished(id: number): Promise<void>
   updateGoals(id:number, data: TUpdateGoals): Promise<void>
 }
 
 export interface IMatchService {
   getAll(query: boolean | undefined): Promise<IMatch[]>
   create(data: Omit<Match, 'id' | 'inProgress'>): Promise<Match>
-  updateFinished(id: number): Promise<void>
+  updateToFinished(id: number): Promise<void>
   updateGoals(id:number, data: TUpdateGoals): Promise<void>
 }

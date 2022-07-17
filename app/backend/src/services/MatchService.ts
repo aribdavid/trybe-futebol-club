@@ -28,8 +28,8 @@ export default class MatchService implements IMatchService {
     return createdMatch;
   }
 
-  async updateFinished(id: number): Promise<void> {
-    await this._model.updateFinished(id);
+  async updateToFinished(id: number): Promise<void> {
+    await this._model.updateToFinished(id);
   }
 
   async updateGoals(id: number, data: TUpdateGoals): Promise<void> {
