@@ -1,6 +1,6 @@
-import { TMatchesResultsWithTotals, TMatchesResults } from '../types/matchesResults.type';
+import { TMatchesResultsWithTotals, TMatchesResults } from '../types/matchesResults';
 import { IMatchWithTeam } from '../interfaces/IMatch';
-import { ILeaderboard } from '../interfaces/Leaderboard.interface';
+import { ILeaderboard } from '../interfaces/ILeaderboard';
 
 const checkResults = (acc: TMatchesResults, teamGoals: number, opponentsGoals: number) => {
   if (teamGoals > opponentsGoals) acc.totalVictories += 1;
