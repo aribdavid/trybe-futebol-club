@@ -4,12 +4,12 @@ import { ILeaderboardService } from '../interfaces/ILeaderboard';
 export default class LeaderboardController {
   constructor(private _service: ILeaderboardService) {}
 
-  async getHomeLeaderboard(_req: Request, res: Response) {
+  async getHomeTeam(_req: Request, res: Response) {
     const leaderboard = await this._service.getHomeTeam();
     return res.status(200).json(leaderboard);
   }
 
-  async getAwayLeaderboard(_req: Request, res: Response) {
+  async getAwayTeam(_req: Request, res: Response) {
     const leaderboard = await this._service.getAwayTeam();
     return res.status(200).json(leaderboard);
   }
