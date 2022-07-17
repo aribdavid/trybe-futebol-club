@@ -31,7 +31,7 @@ export default class MatchRepository implements IMatchModel {
     return createdMatch;
   }
 
-  async updateFinished(id: number): Promise<void> {
+  async updateToFinished(id: number): Promise<void> {
     await this._model.update({ inProgress: false }, { where: { id } });
   }
 
