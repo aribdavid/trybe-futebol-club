@@ -1,4 +1,4 @@
-import { TMatchesResultsWithTotals, TMatchesResults } from '../types/matchesResults';
+import { TMatchesResultsWithTotals, TMatchesResults } from '../types/MatchType';
 import { IMatchWithTeam } from '../interfaces/IMatch';
 import { ILeaderboard } from '../interfaces/ILeaderboard';
 
