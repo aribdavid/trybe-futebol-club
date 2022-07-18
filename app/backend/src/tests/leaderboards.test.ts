@@ -364,5 +364,3 @@ describe('Tests GET method for /leaderboards', () => {
     });
   });
 });
-  156  
-app/backend/src/tests/login.test.ts
