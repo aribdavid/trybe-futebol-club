@@ -1,5 +1,5 @@
 export interface ILeaderboard {
-  name: string
+  name: Array<string>
   totalPoints: number
   totalGames: number
   totalVictories: number
